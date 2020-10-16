@@ -15,7 +15,7 @@
         <nav>
             <ul>
                 <li>
-                    <img src="images/logo.png" alt="">
+                    <img src="images/logo.png" alt="" id="logo">
                 </li>
 
                 <li>
@@ -42,71 +42,76 @@
                 <li><a href="#">iMessage Apps</a></li>
                 <li><a href="#">iPhone</a></li>
                 <li><a href="#">Photography Tools</a></li>
-                <li><img src="images/arrow-prev.png" alt=""></li>
-                <li><img src="images/arrow-next.png" alt=""></li>
+                <li><img src="images/arrow-prev.png" alt="" class="arrows"><img src="images/arrow-next.png" alt="" class="arrows"></li>
             </ul>
         </nav>
     </header>
 
+    <div class="mobile-hidden">
+        <h3>👋 Welcome to Product Hunt</h3>
+        <p>Get the best new products in your inbox, daily</p>
+        <input type="text">
+        <button>Subscribe</button>
+        <img src="images/close.png" alt="" class="cross">
+    </div>
+
     <main>
-        <div>
-            <h3>👋 Welcome to Product Hunt</h3>
-            <p>Get the best new products in your inbox, daily</p>
-            <input type="text">
-            <button>Subscribe</button>
-            <img src="images/close.png" alt="">
-        </div>
-
         <section>
-            <div>
+            <div class="window">
                 <h1>Popular this week</h1>
-                <img src="images/close.png" alt="">
+                <img src="images/close.png" alt="" class="cross">
             </div>
 
-            <div>
-                <img src="images/popular-this-week/app-1.png" alt="">
-                <h2>Duolingo Bots</h2>
-                <p>AI-powered characters to teach language conversation</p>
+            <div class="row">
+                <img src="images/popular-this-week/app-1.png" alt="" class="app-image">
                 <div>
-                    <button><img src="images/votes.png" alt="">1460</button>
-                    <button><img src="images/comments.png" alt="">49</button>
-                    <div>
-                        <button>IPHONE</button>
-                        <p>+2</p>
+                    <h2>Duolingo Bots</h2>
+                    <p>AI-powered characters to teach language conversation</p>
+                    <div class="content">
+                        <button><img src="images/votes.png" alt="">1460</button>
+                        <button><img src="images/comments.png" alt="">49</button>
+                        <div class="row mobile-hidden">
+                            <button>IPHONE</button>
+                            <p>+2</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div>
-                <img src="images/popular-this-week/app-2.png" alt="">
-                <h2>Tribe 2.0</h2>
-                <p>Introducing augmented messaging*</p>
+            <div class="row">
+                <img src="images/popular-this-week/app-2.png" alt="" class="app-image">
                 <div>
-                    <button><img src="images/votes.png" alt="">1465</button>
-                    <button><img src="images/comments.png" alt="">188</button>
-                    <p>🏆#1 IN TECH</p>
-                    <div>
-                        <button>Android</button>
-                        <p>+4</p>
+                    <h2>Tribe 2.0</h2>
+                    <p>Introducing augmented messaging*</p>
+                    <div class="content">
+                        <button><img src="images/votes.png" alt="">1465</button>
+                        <button><img src="images/comments.png" alt="">188</button>
+                        <p class="mobile-hidden">🏆#1 IN TECH</p>
+                        <div class="row mobile-hidden">
+                            <button>Android</button>
+                            <p>+4</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div>
-                <img src="images/popular-this-week/app-3.png" alt="">
-                <h2>Workplace by Facebook</h2>
-                <p>Connect everyone in your company and turn ideas into action</p>
+            <div class="row">
+                <img src="images/popular-this-week/app-3.png" alt="" class="app-image">
                 <div>
-                    <button><img src="images/votes.png" alt="">1003</button>
-                    <button><img src="images/comments.png" alt="">80</button>
-                    <div>
-                        <button>ANDROID</button>
-                        <p>+2</p>
+                    <h2>Workplace by Facebook</h2>
+                    <p>Connect everyone in your company and turn ideas into action</p>
+                    <div class="content">
+                        <button><img src="images/votes.png" alt="">1003</button>
+                        <button><img src="images/comments.png" alt="">80</button>
+                        <div class="row mobile-hidden">
+                            <button>ANDROID</button>
+                            <p>+2</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div>
+            <div id="show-more">
                 <img src="images/arrow-down.png" alt="">
                 <p>SHOW MORE</p>
             </div>
@@ -160,7 +165,7 @@
         </section>
     </main>
 
-    <aside>
+    <aside class="mobile-hidden">
         <div>
             <div>
                 <h1>

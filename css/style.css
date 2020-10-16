@@ -1,3 +1,133 @@
 body {
-  background: #f9f9f9;
+    background: #f9f9f9;
+    display: grid;
+    grid-template-areas: "header header" "mensaje mensaje" "main aside";
+}
+
+header {
+    grid-area: header;
+    width: 100vw;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    box-sizing: border-box;
+}
+
+nav input {
+    width: 70vw;
+}
+
+nav>ul {
+    width: 100vw;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: lighter;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body>div {
+    display: none;
+}
+
+main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    box-sizing: border-box;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+section h1 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+section div {
+    margin-bottom: 10px;
+}
+
+.app-image {
+    width: 116px;
+    height: 116px;
+}
+
+.mobile-hidden {
+    display: none;
+}
+
+.mobile-hidden * {
+    display: none;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.row div {
+    width: 70%;
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.window {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.arrows {
+    width: 14px;
+}
+
+.cross {
+    height: 14px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+aside {
+    display: none;
+}
+
+#show-more {
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+}
+
+#logo {
+    width: 34px;
 }
