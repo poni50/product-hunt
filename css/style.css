@@ -1,19 +1,44 @@
+* {
+    box-sizing: border-box;
+}
+
+a:link {
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: black;
+}
+
 body {
     background: #f9f9f9;
     display: grid;
     grid-template-areas: "header header" "mensaje mensaje" "main aside";
 }
 
+body>div {
+    display: none;
+}
+
+aside * {
+    display: none;
+}
+
 header {
     grid-area: header;
-    width: 100vw;
+    width: 100%;
     box-sizing: border-box;
+    background-color: white;
 }
 
 nav {
     display: flex;
     flex-direction: column;
-    width: 100vw;
+    width: 100%;
     box-sizing: border-box;
 }
 
@@ -22,7 +47,7 @@ nav input {
 }
 
 nav>ul {
-    width: 100vw;
+    width: 100%;
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
@@ -31,23 +56,24 @@ nav>ul {
     justify-content: space-around;
 }
 
-nav a {
-    text-decoration: none;
-    font-weight: lighter;
-    font-size: 16px;
+nav p {
+    width: 8vw;
+    font-size: 9px;
     font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    word-wrap: break-word;
 }
 
-body>div {
-    display: none;
+nav a {
+    text-decoration: none;
 }
 
 main {
     grid-area: main;
     display: flex;
     flex-direction: column;
-    width: 100vw;
     box-sizing: border-box;
+    width: 98.5vw;
 }
 
 section {
@@ -55,35 +81,92 @@ section {
     flex-direction: column;
     padding-left: 10px;
     padding-right: 10px;
+    background-color: white;
+}
+
+section button {
+    width: 20vw;
+    height: 4vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 section h1 {
     padding-top: 15px;
     padding-bottom: 15px;
+    font-size: 20px;
+    font-weight: 50;
 }
 
 section div {
     margin-bottom: 10px;
 }
 
-.app-image {
-    width: 116px;
-    height: 116px;
+article {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.mobile-hidden {
+article>img {
+    width: 15%;
+}
+
+article h2 {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+article p {
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 50;
+    margin-bottom: 5px;
+}
+
+article>div {
+    width: 80%;
+}
+
+.award {
     display: none;
 }
 
-.mobile-hidden * {
+.tags {
     display: none;
 }
 
 .row {
-    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.reverse-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.reverse-row div {
+    width: fit-content;
+    height: 100%;
+    justify-content: center;
+}
+
+.reverse-row .row * {
+    margin-right: 5px;
+    font-size: 15px;
 }
 
 .row div {
@@ -94,8 +177,12 @@ section div {
     width: 100%;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
+    justify-content: flex-start;
+}
+
+.content>* {
+    width: 15vw;
+    margin-right: 5px;
 }
 
 .window {
@@ -107,15 +194,11 @@ section div {
 
 .arrows {
     width: 14px;
+    align-self: flex-end;
 }
 
 .cross {
     height: 14px;
-}
-
-.column {
-    display: flex;
-    flex-direction: column;
 }
 
 aside {
@@ -130,4 +213,226 @@ aside {
 
 #logo {
     width: 34px;
+}
+
+@media all and (min-width: 600px) and (max-width: 849px) {
+    section {
+        margin: 25px;
+    }
+    body>div {
+        display: flex;
+        box-sizing: border-box;
+        margin: 25px;
+        flex-wrap: wrap;
+        justify-content: center;
+        grid-area: mensaje;
+        background-color: white;
+    }
+    body>div * {
+        margin: 5px;
+    }
+    body>div p {
+        margin-right: 7.5vw;
+    }
+    body>div input {
+        margin-left: 7.5vw;
+    }
+    body>div button {
+        background-color: rgb(255, 102, 0);
+        color: white;
+    }
+    body>div .cross {
+        float: right;
+    }
+    .tags {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100vw;
+    }
+    .tags button {
+        width: 15vw;
+    }
+    .tags p {
+        width: fit-content;
+    }
+}
+
+@media all and (min-width: 850px) and (max-width: 1024px) {
+    section {
+        margin: 25px;
+    }
+    body>div {
+        display: flex;
+        box-sizing: border-box;
+        margin: 25px;
+        flex-wrap: wrap;
+        justify-content: center;
+        grid-area: mensaje;
+        background-color: white;
+    }
+    body>div * {
+        margin: 5px;
+    }
+    body>div p {
+        margin-right: 0px;
+    }
+    body>div input {
+        margin-left: 0px;
+    }
+    body>div button {
+        background-color: rgb(255, 102, 0);
+        color: white;
+    }
+    body>div .cross {
+        float: right;
+    }
+    .tags {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100vw;
+    }
+    .tags button {
+        width: 15vw;
+    }
+    .tags p {
+        width: fit-content;
+    }
+}
+
+@media all and (min-width: 1025px) {
+    header {
+        max-width: 100vw;
+        padding-left: 15vw;
+        padding-right: 15vw;
+    }
+    nav input {
+        width: 50vw;
+    }
+    nav p {
+        width: fit-content;
+        font-size: 16px;
+    }
+    nav a {
+        text-decoration: none;
+    }
+    section {
+        margin: 25px;
+    }
+    body>div {
+        width: 68vw;
+        max-width: 98.5vw;
+        display: flex;
+        box-sizing: border-box;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        grid-area: mensaje;
+        background-color: white;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    body>div * {
+        margin: 5px;
+    }
+    body>div h3 {
+        font-size: 24px;
+    }
+    body>div p {
+        font-size: 16px;
+        margin-right: 0px;
+    }
+    body>div input {
+        margin-left: 0px;
+    }
+    body>div button {
+        background-color: rgb(255, 102, 0);
+        color: white;
+    }
+    body>div .cross {
+        float: right;
+    }
+    main {
+        width: 54vw;
+        margin-left: auto;
+    }
+    aside {
+        width: 15vw;
+        margin-top: 25px;
+        margin-right: auto;
+        grid-area: aside;
+        display: flex;
+    }
+    aside>.column {
+        background-color: white;
+    }
+    aside>.column>.row {
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+    aside button {
+        width: 60%;
+        margin: 0 auto;
+    }
+    aside>.column>.row>button {
+        color: white;
+        background-color: rgb(255, 102, 0);
+    }
+    #me-he-enfadado-ya {
+        color: white;
+        background-color: rgb(255, 102, 0);
+    }
+    aside .cross {
+        padding-left: 15px;
+    }
+    aside * {
+        display: block;
+    }
+    .pfp {
+        width: 64px;
+        border-radius: 50%;
+    }
+    .tags {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        padding-left: 75%;
+    }
+    .tags p {
+        font-size: 10px;
+    }
+    .tags button {
+        width: 15vw;
+    }
+    .tags p {
+        width: fit-content;
+    }
+    .live-chat {
+        margin-top: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+    }
+    .live-chat h4 {
+        margin-bottom: 5px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .live-chat p {
+        margin-bottom: 5px;
+        font-size: 14px;
+        font-weight: lighter;
+    }
+    .live-chat h3 {
+        padding-top: 15px;
+        color: rgb(255, 102, 0);
+    }
 }
